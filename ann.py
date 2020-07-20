@@ -70,3 +70,19 @@ y_pred = (y_pred > 0.5)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
+
+#to predict for particular data
+"""
+Credit : 600
+geography : France(1 0 0)
+Gender : Male(1)
+Age : 40
+Tenure: 3
+Bal: 60000
+no of products: 2
+credit card : yes
+is active: yes
+expected sal: 50000
+"""
+to_predict = [[1, 0 ,0, 600, 1, 40, 3, 60000, 2, 1, 1, 50000]]
+print(classifier.predict(sc.transform(to_predict)))
